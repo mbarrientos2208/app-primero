@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="appTest">
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script src="scripts/references/jquery-2.2.4.min.js"></script>
+    <link href="css/Content/bootstrap.min.css" rel="stylesheet"/>
+    <script src="scripts/references/bootstrap.min.js"></script>
+    <title>testApacheCordovaCedesistemas</title>
+</head>
+<body ng-controller="myCtrl">
+<div class="row col-md-12">
+    <div class="form-group">
+        <input name="Nombre" type="text" class="form-control" ng-model="objProducto.nombre"/>
+        <input name="codigo" type="number" class="form-control" ng-model="objProducto.codigo"/>
+        <button ng-click="guardarProducto()" class="btn btn-primary btn-block">Guardar</button>
+    </div>
+    <input name="buscar" type="text" class="form-control" ng-model="valueFilter" />
+    <table class="table table-responsive table-bordered">
+        <tr ng-repeat="item in listProducto|filter:valueFilter">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.codigo }}</td>
+        </tr>
+    </table>
+</div>
+<!--<h1> Hola Mundo titulo</h1>
+<p> Hola Mundo</p>
+
+<div>
+    <p>
+        Nombre: <input type="text" ng-model="valor"/>
+    </p>
+    <p ng-bind="valor"></p>
+    <p>{{valor}}</p>
+</div>
+<div ng-init="mensaje='hola luis'">
+    <input type="text" ng-model="mesaje"/>
+    <p>El mensaje es:{{mensaje}}</p>
+</div>
+
+<div ng-init="number1=100;number2=20">
+    <p> {{number1+number2}}</p>
+    <input type="number" ng-model="num1"/>
+    <input type="number" ng-model="num2"/>
+    <p>{{num1 * num2}}</p>
+</div>
+<input type="text" ng-model="valueNombre"/>
+<button ng-click="cambiarNombre(valueNombre)">Cambiar Nombre</button>
+<p>{{ nombre + ' ' + apellido}} </p>
+
+<div>
+    <button ng-click="showInput()">show</button>
+    <h1 ng-show="isShow"> HOLA MUNDO VIEW</h1>
+</div>
+
+<div>
+    <input type="text" ng-disabled="true"/>
+</div>
+
+<form name="form1">
+    email:
+    <input type="email" name="txtemail" ng-model="emailtext"/>
+    <span ng-show="form1.txtemail.$error.email"> el email es invalido</span>
+</form>
+
+
+<input type="text" ng-model="valueFilter"/>
+<table>
+    <tr ng-repeat="item in listPersonas|filter:valueFilter">
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.identificacion }}</td>
+    </tr>
+</table>-->
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="scripts/platformOverrides.js"></script>
+<script type="text/javascript" src="scripts/index.js"></script>
+<script src="scripts/references/angular.min.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>
